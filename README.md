@@ -1,77 +1,91 @@
- Chateo
----------------
-
-Le site est un chat avec plusieurs canaux Qu'il est possible de rejoindre afin de discuter d'un épisode, d'un chapitre de light novel ou manga ou d'un film, sortie récemment. 
-Il est possible d'échanger avec n'importe  quel personne se connectant aussi au chat. Il y a des modérateurs pouvant gérer les différents canaux.
-
-Le chat se doit d'être en temps réel (ce n'est pas un forum) et doit être très simple d'utilisation (pas besoin de s'inscrire sur le siteweb pour participer au chat)
-
-
----------------
-Problème à résoudre : le chat doit être en temps réel
-
-Solution envisagée : utilisation de socket.io, un module de Node.js permettant l'envoi de socket entre client/serveur.
+# **Chateo**
 
 ---------------
 
-Sous problème: lorsque l'utilisateur clique sur une catégorie de chat, 
-tout doit se faire sans actualiser la page (on propose directement à l'utilisateur de se connecter)
+Introduction :
 
-Solution envisagée: site complètement dynamique juste avant l'entrée dans le chat (barre de recherche dynamique)
+Le site est un chat avec plusieurs canaux Qu&#39;il est possible de rejoindre afin de discuter d&#39;un épisode, d&#39;un chapitre de light novel ou manga ou d&#39;un film, sortie récemment.
+
+Il est possible d&#39;échanger avec n&#39;importe quel personne se connectant aussi au chat. Il y a des modérateurs pouvant gérer les différents canaux.
+
+Le chat se doit d&#39;être en temps réel (ce n&#39;est pas un forum) et doit être très simple d&#39;utilisation (pas besoin de s&#39;inscrire sur le siteweb pour participer au chat)
 
 ---------------
 
-Sous problème: Les séries/anime ont un épisode par semaine, alors il n'y aura plus d'activité sur les chat sur les anciens épisodes.
+**Problème à résoudre :** le chat doit être en temps réel
 
-Solution envisagée: Compte admin pour supprimer/modifier/ajouter des chats supplémentaires 
+**Solution envisagée :** utilisation de socket.io, un module de Node.js permettant l&#39;envoi de socket entre client/serveur.
+
+---------------
+
+**Sous problème:** lorsque l&#39;utilisateur clique sur une catégorie de chat,
+
+tout doit se faire sans actualiser la page (on propose directement à l&#39;utilisateur de se connecter)
+
+**Solution envisagée:** site complètement dynamique juste avant l&#39;entrée dans le chat (barre de recherche dynamique)
+
+---------------
+
+**Sous problème:** Les séries/anime ont un épisode par semaine, alors il n&#39;y aura plus d&#39;activité sur les chat sur les anciens épisodes.
+
+**Solution envisagée:** Compte admin pour supprimer/modifier/ajouter des chats supplémentaires
 
 --------------
 
-Sous problème : si une trop grosse activité, crash des serveurs
+**Sous problème :** si une trop grosse activité, crash des serveurs
 
-Solution envisagée : Limiter le nombre de personne pouvant être en simultanée
+**Solution envisagée :** Limiter le nombre de personne pouvant être en simultanée
+
 dans un chat.
 
 --------------
 
-Sous problème: générer de l'importance à la participation au chat
+**Sous problème :** générer de l&#39;importance à la participation au chat
 
-Solution envisagée: rang d'utilisateur selon le nombre de message envoyé et/ou le nombre de jour connecté
-
+**Solution envisagée :** rang d&#39;utilisateur selon le nombre de message envoyé et/ou le nombre de jour connecté
 
 -----------------------------------
 
+**Feuille de route et Deadlines :**
 
-Feuille de route: 
+Etape 1 : concevoir un seul chat fonctionnel **(Obligatoire)**
 
+**Deadline :**** 20/12/2020**
 
-Etape 1 : concevoir un seul chat fonctionnel
-Etape 2: création de base de donnée et connexion au chat possible via login
-Etape 3: compte modérateur essayant certaines fonctionnalité dans le chat (première fonctionnalité à implémenter, la suppression de messages ou le bannissement d'un autre utilisateur lambda)
-Etape 4: Création d'une galerie correspondant chacun à un chat différent
-Etape 5: compte admin pour supprimer ajouter modifier les galeries
-Etape 6:Ajout de récompense/rang aux utilisateurs selon leur participation
+Etape 2: création de base de donnée et connexion au chat possible via login **(Obligatoire)**
 
+**Deadline :**** 25/12/2020**
+
+Etape 3: compte modérateur essayant certaines fonctionnalité dans le chat (première fonctionnalité à implémenter, la suppression de messages ou le bannissement d&#39;un autre utilisateur lambda) **(Obligatoire)**
+
+**Deadline :**** 28/12/2020**
+
+Etape 4: Création d&#39;une galerie correspondant chacun à un chat différent **(Obligatoire)**
+
+**Deadline :**** 2/01/2021**
+
+Etape 5: compte admin pour supprimer ajouter modifier les galeries (Optionnel)
+
+**Deadline :**** 6/01/2021**
+
+Etape 6: Ajout de récompense/rang aux utilisateurs selon leur participation (Optionnel)
+
+**Deadline :**** 6/01/2021**
 
 --------------------------------
 
-Répartition des tâches :
+**Répartition des tâches :**
 
+**Boudissa Nourredine :**
 
+Création d&#39;un chat simple avec socket.io
 
-Boudissa Nourredine :
+Création d&#39;un compte modérateur pouvant supprimer des messages, bannir des persones, ou désactiver le chat
 
+**Shutian Liu :**
 
-Création d'un chat simple avec socket.io
-Création d'un compte modérateur pouvant supprimer des messages, bannir des persones, ou désactiver le chat
+Création de la page d&#39;accueil (avec les différentes catégories, la page login)
 
-
-Shutian Liu :
-
-Création de la page d'accueil (avec les différentes catégories, la page login)
 Création de la base de donnée
-Création d'un compte admin qui peut ajouter à la base de données des séries/films/anime ou en supprimer/modifier leurs informations
 
-
-
-17/12/2020
+Création d&#39;un compte admin qui peut ajouter à la base de données des séries/films/anime ou en supprimer/modifier leurs informations
