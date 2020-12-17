@@ -73,3 +73,5 @@ Création de la base de donnée
 Création d'un compte admin qui peut ajouter à la base de données des séries/films/anime ou en supprimer/modifier leurs informations
 
 
+
+17/12/2020
